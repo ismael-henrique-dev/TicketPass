@@ -1,4 +1,4 @@
-import "./App.css"
+import "./index.css"
 import { Router } from "./pages/router"
 
 function App() {

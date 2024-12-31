@@ -1,6 +1,6 @@
 import clsx from "clsx"
 
-export function Input({ variant = "outline", ...props }) {
+export function Input({ variant, ...props }) {
   return (
     <div
       className={clsx("flex-1 p-2", {

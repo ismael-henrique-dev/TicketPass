@@ -1,15 +1,15 @@
-import { FormLogin } from "../components/login/form-login"
+import { FormRegister } from "../components/register/form-register"
 
-export function Login() {
+export function Register() {
   return (
     <div className="flex flex-col text-left justify-center min-h-screen">
       <div className="flex flex-col text-left justify-center m-auto gap-8 bg-zinc-50 border border-zinc-200 p-8 w-auto md:w-1/3 rounded-3xl ">
-        <h1 className="text-xl font-semibold">Login</h1>
-        <FormLogin />
+        <h1 className="text-xl font-semibold">Register</h1>
+        <FormRegister />
         <span className="text-center">
-          Ainda não tenho uma conta -{" "}
-          <a href="/auth/register" className="text-balance underline">
-            Cadastre-se
+          Já tenho uma conta -{" "}
+          <a href="/auth/login" className="text-balance underline">
+            Entrar
           </a>
         </span>
       </div>
