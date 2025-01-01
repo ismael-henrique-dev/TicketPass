@@ -1,7 +1,13 @@
+import { Search } from "../components/home/search"
+import { TicketCard } from "../components/ui"
+
 export function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <main>
+      <Search />
+      <section className="flex flex-col">
+        <TicketCard />
+      </section>
+    </main>
   )
 }
