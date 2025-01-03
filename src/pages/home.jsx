@@ -1,13 +1,15 @@
-import { Search } from "../components/home/search"
-import { TicketCard } from "../components/ui"
+import { Search, TicketCard } from "../components/ui"
 
 export function Home() {
   return (
-    <main>
+    <main className="flex flex-col gap-16 p-20">
       <Search />
-      <section className="flex flex-col">
-        <TicketCard />
-      </section>
+      <div className="grid grid-cols-1">
+        <section id="tickets-list" className="flex flex-col">
+          <TicketCard variant="primary" />
+        </section>
+        <section></section>
+      </div>
     </main>
   )
 }

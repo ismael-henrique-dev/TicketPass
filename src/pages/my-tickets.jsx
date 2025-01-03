@@ -1,7 +1,14 @@
+import { Search, TicketCard } from "../components/ui"
+
 export function MyTickets() {
   return (
     <div>
-      <h1>My tickets</h1>
+      <main>
+        <Search />
+        <section className="flex flex-col">
+          <TicketCard variant="secondary" />
+        </section>
+      </main>
     </div>
   )
 }

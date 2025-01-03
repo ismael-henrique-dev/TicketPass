@@ -3,39 +3,94 @@ import {
   BuildingOffice,
   CalendarBlank,
   City,
+  PencilSimple,
+  Prohibit,
   Ticket,
   Timer,
 } from "@phosphor-icons/react"
 import { Button } from "./button"
+import clsx from "clsx"
 
-export function TicketCard() {
+export function TicketCard({ variant = "primary" }) {
   return (
-    <div className="bg-zinc-100 border-2 border-orange-500 rounded-3xl p-6 flex justify-between ">
+    <div
+      className={clsx(
+        "border-2 border-orange-500 rounded-3xl p-6 flex justify-between",
+        {
+          "bg-orange-500 text-zinc-50": variant === "secondary",
+        }
+      )}
+    >
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-4">
-          <City className="text-orange-500 size-6" />
-          <span>São Paulo - Belo Horizonte</span>
+          <City
+            size={40}
+            className={clsx({
+              "text-orange-500": variant === "primary",
+            })}
+          />
+          <span className="text-xl font-medium">
+            São Paulo - Belo Horizonte
+          </span>
         </div>
         <div className="flex items-center gap-4">
-          <CalendarBlank className="text-orange-500 size-6" />
-          <span>Viajar em 12 de novembro.</span>
+          <CalendarBlank
+            size={40}
+            className={clsx({
+              "text-orange-500": variant === "primary",
+            })}
+          />
+          <span className="text-xl font-medium">Viajar em 12 de novembro.</span>
         </div>
         <div className="flex items-center gap-4">
-          <Timer className="text-orange-500 size-6" />
-          <span>19:00</span>
+          <Timer
+            size={40}
+            className={clsx({
+              "text-orange-500": variant === "primary",
+            })}
+          />
+          <span className="text-xl font-medium">19:00</span>
         </div>
         <div className="flex items-center gap-4">
-          <BuildingOffice className="text-orange-500 size-6" />
-          <span>Empresa X</span>
+          <BuildingOffice
+            size={40}
+            className={clsx({
+              "text-orange-500": variant === "primary",
+            })}
+          />
+          <span className="text-xl font-medium">Empresa X</span>
         </div>
-        <Button>
-          Reservar
-          <Ticket size={20} />
-        </Button>
+        {variant === "primary" && (
+          <Button variant="default">
+            Reservar
+            <Ticket size={20} />
+          </Button>
+        )}
+        {variant === "secondary" && (
+          <div className="bg-zinc-50 p-3 flex items-center justify-center w-24 gap-4 rounded-xl">
+            <Button variant="minimalist">
+              <PencilSimple size={20} className="text-orange-500" />
+            </Button>
+            <Button variant="minimalist">
+              <Prohibit size={20} className="text-orange-500" />
+            </Button>
+          </div>
+        )}
       </div>
       <div className="flex flex-col justify-between items-end">
-        <Boat className="text-orange-500 size-6" size={40} />
-        <strong className="text-orange-500 text-3xl font-semibold">R$ 200,00</strong>
+        <Boat
+          className={clsx({
+            "text-orange-500": variant === "primary",
+          })}
+          size={40}
+        />
+        <strong
+          className={clsx(" text-3xl font-semibold", {
+            "text-orange-500": variant === "primary",
+          })}
+        >
+          R$ 200,00
+        </strong>
       </div>
     </div>
   )

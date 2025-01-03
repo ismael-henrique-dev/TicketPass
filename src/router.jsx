@@ -1,9 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { DefaultLayout } from "../layouts/default-layout"
-import { Home } from "./home"
-import { Login } from "./login"
-import { Register } from "./register"
-import { MyTickets } from "./my-tickets"
+import { DefaultLayout } from "./layouts/default-layout"
+import { Account, Home, Login, MyTickets, Register } from "./pages"
 
 export function Router() {
   return (
@@ -14,6 +11,7 @@ export function Router() {
         <Route path="" element={<DefaultLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/my-tickets" element={<MyTickets />} />
+          <Route path="/account" element={<Account />} />
         </Route>
       </Routes>
     </BrowserRouter>

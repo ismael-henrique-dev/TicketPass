@@ -9,7 +9,9 @@ export function Header() {
 
   return (
     <header className="bg-zinc-100 flex justify-between px-6 py-4 m-2 rounded-md">
-      <img src={logo} alt="logo" />
+      <NavLink to="/">
+        <img src={logo} alt="logo" />
+      </NavLink>
       <nav className="flex gap-11">
         <NavLink to="/" className={isActiveLink}>
           Home
