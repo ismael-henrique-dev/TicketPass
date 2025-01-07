@@ -1,13 +1,12 @@
-import { Search, TicketCard } from "../components/ui"
+import { TicketsListMyTickets } from '../components/my-tickets/tickets-list-my-tickets'
+import { Search } from '../components/ui'
 
 export function MyTickets() {
   return (
     <div>
       <main>
         <Search />
-        <section className="flex flex-col">
-          <TicketCard variant="secondary" />
-        </section>
+        <TicketsListMyTickets />
       </main>
     </div>
   )

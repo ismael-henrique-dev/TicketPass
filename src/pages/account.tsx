@@ -1,11 +1,11 @@
-import { Search, TicketCard } from '../components/ui'
+import { Search } from '../components/ui'
 
 export function Account() {
   return (
     <main>
       <Search />
       <section className='flex flex-col'>
-        <TicketCard variant='primary' />
+        <h2>Accounts</h2>
       </section>
     </main>
   )

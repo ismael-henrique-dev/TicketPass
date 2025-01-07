@@ -11,7 +11,11 @@ import {
 import { Button } from './button'
 import clsx from 'clsx'
 
-export function TicketCard({ variant = 'primary' }) {
+interface TicketCardProps {
+  variant: 'primary' | 'secondary'
+}
+
+export function TicketCard2({ variant = 'primary' }: TicketCardProps) {
   return (
     <div
       className={clsx(
@@ -29,6 +33,7 @@ export function TicketCard({ variant = 'primary' }) {
               'text-orange-500': variant === 'primary',
             })}
           />
+
           <span className='text-xl font-medium'>
             São Paulo - Belo Horizonte
           </span>
