@@ -1,5 +1,5 @@
-import { Router } from "./router"
-import "./index.css"
+import { Router } from './router'
+import './index.css'
 
 export function App() {
   return (
@@ -8,4 +8,3 @@ export function App() {
     </>
   )
 }
-

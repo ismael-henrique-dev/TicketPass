@@ -1,4 +1,4 @@
-import { Search, TicketCard } from "../components/ui"
+import { Search, TicketCard } from '../components/ui'
 
 export function Home() {
   return (
