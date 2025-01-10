@@ -1,4 +1,5 @@
-import { Button, Input } from '../ui'
+import { Button } from '../button'
+import { Input } from '../input'
 
 export function FormRegister() {
   return (

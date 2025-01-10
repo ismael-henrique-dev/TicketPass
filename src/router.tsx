@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { DefaultLayout } from './layouts/default-layout'
-import { Account, Home, Login, MyTickets, Register } from './pages'
+import { Account, ForgotPasswordSendEmail, Home, Login, MyTickets, Register } from './pages'
 
 export function Router() {
   return (
@@ -13,6 +13,10 @@ export function Router() {
         <Route
           path='/auth/register'
           element={<Register />}
+        />
+        <Route
+          path='/auth/forgot-password'
+          element={<ForgotPasswordSendEmail />}
         />
         <Route
           path=''
