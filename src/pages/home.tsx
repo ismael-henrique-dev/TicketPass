@@ -1,5 +1,5 @@
+import { SelectPriceFilter, TicketsListHome } from '../components/home'
 import { Search } from '../components/ui'
-import { TicketsListHome } from '../components/home/tickets-list-home'
 
 export function Home() {
   return (
@@ -8,6 +8,9 @@ export function Home() {
       <div className='grid grid-cols-1'>
         <TicketsListHome />
       </div>
+      <section>
+        <SelectPriceFilter />
+      </section>
     </main>
   )
 }
