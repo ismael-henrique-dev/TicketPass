@@ -3,7 +3,7 @@ import { TicketCard } from '../ui'
 
 export function TicketsListHome() {
   return (
-    <section id='tickets-list' className='flex flex-col'>
+    <section id='tickets-list' className='flex flex-1 flex-col'>
       <TicketCard.Root variant='primary'>
         <TicketCard.Content>
           <TicketCard.Info infoTitle='23/06/2009'>
