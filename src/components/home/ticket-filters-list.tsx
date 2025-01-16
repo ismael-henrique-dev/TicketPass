@@ -13,7 +13,7 @@ export function TicketFiltersList() {
       </TicketFilter.Item>
       <TicketFilter.Item>
         <TicketFilter.Label>Origem</TicketFilter.Label>
-        <TicketFilter.Combox></TicketFilter.Combox>
+        <TicketFilter.Select></TicketFilter.Select>
       </TicketFilter.Item>
       <TicketFilter.Item>
         <TicketFilter.Label>Destino</TicketFilter.Label>

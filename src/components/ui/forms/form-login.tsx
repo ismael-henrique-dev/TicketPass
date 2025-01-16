@@ -26,7 +26,7 @@ export function FormLogin() {
           Esqueci a senha
         </a>
       </div>
-      <Button type='submit' variant='submit'>
+      <Button type='submit'  >
         Entrar
       </Button>
     </form>

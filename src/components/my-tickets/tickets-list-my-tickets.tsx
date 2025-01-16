@@ -3,9 +3,9 @@ import { TicketCard } from '../ui'
 
 export function TicketsListMyTickets() {
   return (
-    <section className="flex flex-col">
-      <TicketCard.Root variant='secondary'>
-        <TicketCard.Content>
+    <section className="grid grid-cols-2 gap-8">
+      {Array.from({ length: 4 }).map((_, index) => (<TicketCard.Root variant='secondary'>
+        <TicketCard.Content key={index}>
           <TicketCard.Info infoTitle='23/06/2009'>
             <TicketCard.Icon Icon={City} variant='secondary' size={40} />
           </TicketCard.Info>
@@ -25,7 +25,8 @@ export function TicketsListMyTickets() {
           transportType='ship'
           price={200}
         />
-      </TicketCard.Root>
+      </TicketCard.Root>))}
+      
     </section>
   )
 }

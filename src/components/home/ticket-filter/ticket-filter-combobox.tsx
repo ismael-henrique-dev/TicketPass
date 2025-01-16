@@ -1,4 +1,4 @@
-'use client'
+
 
 import * as React from 'react'
 import { Check, ChevronsUpDown, Command } from 'lucide-react'
@@ -44,9 +44,10 @@ const frameworks = [
 export function TicketFilterCombobox() {
   const [open, setOpen] = React.useState(false)
   const [value, setValue] = React.useState('')
+  console.log(open)
 
   return (
-    <Popover open={open} onOpenChange={setOpen}>
+    <Popover open={open} onOpenChange={(isOpen) => setOpen(isOpen)}>
       <PopoverTrigger asChild>
         <Button
           variant='outline'
